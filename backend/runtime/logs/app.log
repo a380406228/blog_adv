@@ -599,3 +599,455 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1509584889.596
     'REQUEST_TIME' => 1509584889
 ]
+2017-11-02 01:22:31 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(38): yii\db\Query->all()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'
+The SQL being executed was: SELECT `id`, `email` FROM `poststatus`' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `e...')
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(38): yii\db\Query->all()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'email' in 'field list'
+)
+
+2017-11-02 01:22:31 [::1][-][-][info][application] $_GET = [
+    'r' => 'post/update'
+    'id' => '32'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '37885qoqvqff0lisqg65s6ai47'
+    '_csrf-backend' => '41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Z­Ä’Ñ#|CäP¸Ê¸‹È`¿Ô¹÷³‰9±K\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blog_adv/backend/web/index.php?r=post%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=37885qoqvqff0lisqg65s6ai47; _csrf-backend=41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Z%AD%14%C4%92%D1%23%7CC%E4%1EP%B8%CA%B8%8B%C8%60%BF%D4%04%B9%F7%B3%1A%16%899%10%B1K%8F%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\libnvvp;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\compiler;D:\\Python3\\Scripts\\;D:\\Python3;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Android\\SDK_Studio;D:\\Android\\Java\\jdk1.8.0_66\\bin;D:\\Android\\Java\\jdk1.8.0_66\\jre\\bin;D:\\Android\\sdk\\platform-tools;D:\\Android\\sdk\\tools;D:\\Android\\ANT\\apache-ant-1.9.7\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;E:\\caffe\\caffe-windows-master\\3rdparty\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;D:\\Program Files\\Anaconda2;D:\\Program Files\\Anaconda2\\Scripts;D:\\Program Files\\Anaconda2\\Library\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\lib\\x64;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\bin\\x64;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\common\\lib\\x64;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\wamp\\bin\\php\\php5.6.25;D:\\RN\\NODEJS\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/blog_adv/backend/web/index.php'
+    'REMOTE_PORT' => '9061'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=post%2Fupdate&id=32'
+    'REQUEST_URI' => '/blog_adv/backend/web/index.php?r=post%2Fupdate&id=32'
+    'SCRIPT_NAME' => '/blog_adv/backend/web/index.php'
+    'PHP_SELF' => '/blog_adv/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1509585751.22
+    'REQUEST_TIME' => 1509585751
+]
+2017-11-02 01:30:19 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ';'' in D:\wamp\www\blog_adv\backend\views\post\_form.php:72
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#1 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render()
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): ::unknown()
+#3 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#6 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render()
+#7 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PostController->actionUpdate()
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#12 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#13 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2017-11-02 01:30:19 [::1][-][-][info][application] $_GET = [
+    'r' => 'post/update'
+    'id' => '32'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '37885qoqvqff0lisqg65s6ai47'
+    '_csrf-backend' => '41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Z­Ä’Ñ#|CäP¸Ê¸‹È`¿Ô¹÷³‰9±K\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blog_adv/backend/web/index.php?r=post%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=37885qoqvqff0lisqg65s6ai47; _csrf-backend=41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Z%AD%14%C4%92%D1%23%7CC%E4%1EP%B8%CA%B8%8B%C8%60%BF%D4%04%B9%F7%B3%1A%16%899%10%B1K%8F%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\libnvvp;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\compiler;D:\\Python3\\Scripts\\;D:\\Python3;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Android\\SDK_Studio;D:\\Android\\Java\\jdk1.8.0_66\\bin;D:\\Android\\Java\\jdk1.8.0_66\\jre\\bin;D:\\Android\\sdk\\platform-tools;D:\\Android\\sdk\\tools;D:\\Android\\ANT\\apache-ant-1.9.7\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;E:\\caffe\\caffe-windows-master\\3rdparty\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;D:\\Program Files\\Anaconda2;D:\\Program Files\\Anaconda2\\Scripts;D:\\Program Files\\Anaconda2\\Library\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\lib\\x64;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\bin\\x64;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\common\\lib\\x64;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\wamp\\bin\\php\\php5.6.25;D:\\RN\\NODEJS\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/blog_adv/backend/web/index.php'
+    'REMOTE_PORT' => '9926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=post%2Fupdate&id=32'
+    'REQUEST_URI' => '/blog_adv/backend/web/index.php?r=post%2Fupdate&id=32'
+    'SCRIPT_NAME' => '/blog_adv/backend/web/index.php'
+    'PHP_SELF' => '/blog_adv/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1509586219.492
+    'REQUEST_TIME' => 1509586219
+]
+2017-11-02 01:30:21 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ';'' in D:\wamp\www\blog_adv\backend\views\post\_form.php:72
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#1 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render()
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): ::unknown()
+#3 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#6 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render()
+#7 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PostController->actionUpdate()
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#12 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#13 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2017-11-02 01:30:20 [::1][-][-][info][application] $_GET = [
+    'r' => 'post/update'
+    'id' => '32'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '37885qoqvqff0lisqg65s6ai47'
+    '_csrf-backend' => '41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Z­Ä’Ñ#|CäP¸Ê¸‹È`¿Ô¹÷³‰9±K\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blog_adv/backend/web/index.php?r=post%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=37885qoqvqff0lisqg65s6ai47; _csrf-backend=41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Z%AD%14%C4%92%D1%23%7CC%E4%1EP%B8%CA%B8%8B%C8%60%BF%D4%04%B9%F7%B3%1A%16%899%10%B1K%8F%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\libnvvp;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\compiler;D:\\Python3\\Scripts\\;D:\\Python3;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Android\\SDK_Studio;D:\\Android\\Java\\jdk1.8.0_66\\bin;D:\\Android\\Java\\jdk1.8.0_66\\jre\\bin;D:\\Android\\sdk\\platform-tools;D:\\Android\\sdk\\tools;D:\\Android\\ANT\\apache-ant-1.9.7\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;E:\\caffe\\caffe-windows-master\\3rdparty\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;D:\\Program Files\\Anaconda2;D:\\Program Files\\Anaconda2\\Scripts;D:\\Program Files\\Anaconda2\\Library\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\lib\\x64;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\bin\\x64;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\common\\lib\\x64;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\wamp\\bin\\php\\php5.6.25;D:\\RN\\NODEJS\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/blog_adv/backend/web/index.php'
+    'REMOTE_PORT' => '9927'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=post%2Fupdate&id=32'
+    'REQUEST_URI' => '/blog_adv/backend/web/index.php?r=post%2Fupdate&id=32'
+    'SCRIPT_NAME' => '/blog_adv/backend/web/index.php'
+    'PHP_SELF' => '/blog_adv/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1509586220.927
+    'REQUEST_TIME' => 1509586220
+]
+2017-11-02 01:31:52 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(291): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(84): yii\db\Query->column()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+The SQL being executed was: SELECT `name`, `id` FROM `adminuser` ORDER BY `position`' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT `name`, ...')
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(291): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(84): yii\db\Query->column()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'name' in 'field list'
+)
+
+2017-11-02 01:31:52 [::1][-][-][info][application] $_GET = [
+    'r' => 'post/update'
+    'id' => '32'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '37885qoqvqff0lisqg65s6ai47'
+    '_csrf-backend' => '41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Z­Ä’Ñ#|CäP¸Ê¸‹È`¿Ô¹÷³‰9±K\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blog_adv/backend/web/index.php?r=post%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=37885qoqvqff0lisqg65s6ai47; _csrf-backend=41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Z%AD%14%C4%92%D1%23%7CC%E4%1EP%B8%CA%B8%8B%C8%60%BF%D4%04%B9%F7%B3%1A%16%899%10%B1K%8F%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\libnvvp;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\compiler;D:\\Python3\\Scripts\\;D:\\Python3;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Android\\SDK_Studio;D:\\Android\\Java\\jdk1.8.0_66\\bin;D:\\Android\\Java\\jdk1.8.0_66\\jre\\bin;D:\\Android\\sdk\\platform-tools;D:\\Android\\sdk\\tools;D:\\Android\\ANT\\apache-ant-1.9.7\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;E:\\caffe\\caffe-windows-master\\3rdparty\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;D:\\Program Files\\Anaconda2;D:\\Program Files\\Anaconda2\\Scripts;D:\\Program Files\\Anaconda2\\Library\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\lib\\x64;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\bin\\x64;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\common\\lib\\x64;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\wamp\\bin\\php\\php5.6.25;D:\\RN\\NODEJS\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/blog_adv/backend/web/index.php'
+    'REMOTE_PORT' => '10003'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=post%2Fupdate&id=32'
+    'REQUEST_URI' => '/blog_adv/backend/web/index.php?r=post%2Fupdate&id=32'
+    'SCRIPT_NAME' => '/blog_adv/backend/web/index.php'
+    'PHP_SELF' => '/blog_adv/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1509586312.537
+    'REQUEST_TIME' => 1509586312
+]
+2017-11-02 01:32:12 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'position' in 'order clause'' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(291): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(84): yii\db\Query->column()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'position' in 'order clause'
+The SQL being executed was: SELECT `nickname`, `id` FROM `adminuser` ORDER BY `position`' in D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT `nicknam...')
+#1 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\db\Query.php(291): yii\db\Command->queryAll()
+#3 D:\wamp\www\blog_adv\backend\views\post\_form.php(84): yii\db\Query->column()
+#4 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#5 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#6 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#7 D:\wamp\www\blog_adv\backend\views\post\update.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#8 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(330): require('D:\\wamp\\www\\blo...')
+#9 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#10 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#11 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('<span class="st...', '[<span class="s...', Object(backend\controllers\PostController))
+#12 D:\wamp\www\blog_adv\backend\controllers\PostController.php(92): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#13 [internal function]: backend\controllers\PostController->actionUpdate('<span class="st...')
+#14 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#15 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#16 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#17 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#18 D:\wamp\www\blog_adv\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp\www\blog_adv\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'position' in 'order clause'
+)
+
+2017-11-02 01:32:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'post/update'
+    'id' => '32'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '37885qoqvqff0lisqg65s6ai47'
+    '_csrf-backend' => '41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Z­Ä’Ñ#|CäP¸Ê¸‹È`¿Ô¹÷³‰9±K\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blog_adv/backend/web/index.php?r=post%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=37885qoqvqff0lisqg65s6ai47; _csrf-backend=41306f2715b8d8b437e3e8f32e9a68b29461ad39c30f6f71d81cde8740b13050a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Z%AD%14%C4%92%D1%23%7CC%E4%1EP%B8%CA%B8%8B%C8%60%BF%D4%04%B9%F7%B3%1A%16%899%10%B1K%8F%22%3B%7D'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\libnvvp;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\mpirt;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32_win\\compiler;D:\\Python3\\Scripts\\;D:\\Python3;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Android\\SDK_Studio;D:\\Android\\Java\\jdk1.8.0_66\\bin;D:\\Android\\Java\\jdk1.8.0_66\\jre\\bin;D:\\Android\\sdk\\platform-tools;D:\\Android\\sdk\\tools;D:\\Android\\ANT\\apache-ant-1.9.7\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;E:\\caffe\\caffe-windows-master\\3rdparty\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;D:\\Program Files\\Anaconda2;D:\\Program Files\\Anaconda2\\Scripts;D:\\Program Files\\Anaconda2\\Library\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\lib\\x64;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\bin;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\bin\\x64;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v7.5\\common\\lib\\x64;C:\\Program Files (x86)\\Common Files\\microsoft shared\\TigerKin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\wamp\\bin\\php\\php5.6.25;D:\\RN\\NODEJS\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) PHP/5.6.25 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) PHP/5.6.25'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/blog_adv/backend/web/index.php'
+    'REMOTE_PORT' => '10015'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=post%2Fupdate&id=32'
+    'REQUEST_URI' => '/blog_adv/backend/web/index.php?r=post%2Fupdate&id=32'
+    'SCRIPT_NAME' => '/blog_adv/backend/web/index.php'
+    'PHP_SELF' => '/blog_adv/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1509586331.903
+    'REQUEST_TIME' => 1509586331
+]
